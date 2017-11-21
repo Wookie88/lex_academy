@@ -1,0 +1,14 @@
+.THIS .anim{
+	border-color: red; 
+	border-width: 5px;
+	border-style: solid;   
+    -webkit-animation: pulse 1s infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+      0% {border-color: red;}
+     25% {border-color: magenta;}
+     50% {border-color: blue;}
+     75% {border-color: cyan;}
+     100% {border-color: green;}
+}

@@ -1,0 +1,31 @@
+<aura:component >
+	
+	<!-- ATTRIBUTES -->
+	<aura:attribute name="title" type="String" default="No title"/>
+	<aura:attribute name="message" type="String" default=""/>
+
+	<!-- HANDLERS -->
+	<aura:handler event="c:LEX_EventApp" action="{!c.handleAppEvent}"/>
+	<aura:handler event="c:LEX_EventCmp" action="{!c.handleCmpEvent}" name="myCmpEvent" includeFacets="true"/> <!-- includeFacets="true" -->
+
+	<!-- EVENTS -->
+	<aura:registerEvent name="myAppEvent" type="c:LEX_EventApp"/>
+	<aura:registerEvent name="myCmpEvent" type="c:LEX_EventCmp"/>
+
+	<!-- BODY -->
+	<div>
+		<div class="border">
+			<h2>{!v.title}</h2>
+			<p>Message recieved: <b>{!v.message}</b></p>
+			<lightning:button label="Send application event" onclick="{!c.sendAppEvent}"/>
+			<lightning:button label="Send component event" onclick="{!c.sendCmpEvent}"/>
+			<lightning:button label="Clear message" onclick="{!c.clearMessage}"/>
+
+			{!v.body}
+
+		</div>
+
+	</div>
+
+
+</aura:component>

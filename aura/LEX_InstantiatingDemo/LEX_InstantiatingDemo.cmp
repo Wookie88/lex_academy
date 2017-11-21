@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+	<!-- BODY -->
+	<lightning:card title="Instantiating">
+		<div class="border">
+			<h1>Parent</h1>
+			<c:LEX_StaticChild />
+			<br/>
+			<br/>
+			<c:LEX_FunnyBorder >
+				<lightning:button label="BUTTON WITH FANCY BORDER"/>
+			</c:LEX_FunnyBorder>
+		</div>
+		<br/>
+		<br/>
+		<lightning:button label="clicking this will create button dynamically" onclick="{!c.createButton}"/>
+
+		{!v.body}
+
+	</lightning:card>
+
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component >
+	
+	<!-- ATTRIBUTES -->
+	<aura:attribute name="message" type="String" default="initial message"/>
+
+	<!-- METHODS -->
+	<aura:method name="displayHello" action="{!c.displayHello}">
+		<aura:attribute name="yourName" type="String" description="name to display"/>
+	</aura:method>
+	<aura:method name="clearMessage" action="{!c.clearMessage}"/>
+
+	<!-- BODY -->
+	<div>
+		<p>Current message: <b>{!v.message}</b></p>
+
+
+	</div>
+
+</aura:component>

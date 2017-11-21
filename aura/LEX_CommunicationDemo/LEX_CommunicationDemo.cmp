@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	
+	<!-- ATTRIBUTES -->
+	<aura:attribute name="message" type="String"/>
+
+	<!-- HANDLERS -->
+	<aura:handler event="c:LEX_EventApp" action="{!c.handleAppEvent}"/>
+	<aura:handler event="c:LEX_EventCmp" action="{!c.handleCmpEvent}" name="myCmpEvent"/>
+
+	<!-- BODY -->
+	<lightning:card title="Communication demo">
+		<h1 class="slds-page-header__title slds-truncate slds-align-middle"> Events </h1>
+
+		<p>Message recieved: <b>{!v.message}</b></p>
+
+		<lightning:button label="Clear message" onclick="{!c.clearMessage}"/>
+
+		<c:LEX_CommunicationChild title="Child 1">
+			<c:LEX_CommunicationChild title="Grandchild 1"/>
+		</c:LEX_CommunicationChild>
+
+		<c:LEX_CommunicationChild title="Child 2">
+			<c:LEX_CommunicationChild title="Grandchild 2"/>
+		</c:LEX_CommunicationChild>
+
+		-------------------------
+
+		<h1 class="slds-page-header__title slds-truncate slds-align-middle"> Methods </h1>
+
+		<lightning:button label="Call child Hello" onclick="{!c.callChildHello}"/>
+		<lightning:button label="Call child clear message" onclick="{!c.callChildClear}"/>
+
+		<c:LEX_CommunicationMethodChild aura:id="methodChild"/>
+
+	</lightning:card>
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component >
+	
+	<!-- BODY -->
+
+	<div>
+		<div class="anim">
+			{!v.body}
+		</div>
+	</div>
+
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+	
+	<!-- BODY -->
+	<div>
+		<div class="colorful">
+			<p>This is child that is static referenced.</p>
+		</div>
+	</div>
+
+</aura:component>

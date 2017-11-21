@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="LEX_DummyCtrl">
+
+    <!-- ATTRIBUTES -->
+    <aura:attribute name="message" type="String" default="Message"/>
+    <aura:attribute name="colours" type="String[]" default="['red', 'green', 'blue']"/>
+
+    <!-- BODY -->
+    <lightning:card title="Handlers">
+        <div>{!v.message}</div>
+        <lightning:button label="Click me" onclick="{!c.onBtn1Click}"/>
+        <button class="slds-button slds-button_neutral" value="No, click me!!!" onclick="{!c.onBtn2Click}">No, click me!!!</button>
+        <br/>
+        <aura:iteration items="{!v.colours}" var="col">
+            <lightning:button label="{!'Colour ' + col}" aura:id="{!col}" value="{!col}" onclick="{!c.onBtnColourClick}"/><br/>
+        </aura:iteration>
+
+        <lightning:button label="Last button" onclick="{!c.onLastBtnClick}"/>
+    </lightning:card>
+</aura:component>
