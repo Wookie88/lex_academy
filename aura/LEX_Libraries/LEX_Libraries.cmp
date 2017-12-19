@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <!-- ATTRIBUTES -->
+
+
+    <!-- BODY -->
+    <lightning:card title="Lightning Libraries">
+        <h1>Overlay Library</h1>
+        <lightning:overlayLibrary aura:id="overlayLib"/>
+        <lightning:button label="Simple popup" onclick="{!c.openPopup1}"/>
+        <lightning:button label="Popup with component" onclick="{!c.openPopup2}"/>
+        <h1>Notifications Library</h1>
+        <lightning:notificationsLibrary aura:id="notifLib"/>
+        <lightning:button label="Show notice" onclick="{!c.showNotice}"/>
+        <lightning:button label="Show toast" onclick="{!c.showToast}"/>
+    </lightning:card>
+</aura:component>

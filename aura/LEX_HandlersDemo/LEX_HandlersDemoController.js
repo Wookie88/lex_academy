@@ -15,8 +15,4 @@
         var msg = 'Id = ' + event.getSource().getLocalId() + ' value = ' + event.getSource().get('v.value');
         component.set('v.message', msg);
     },
-
-    onLastBtnClick: function(component, event, helper) {
-        helper.lastBtnClick(component);
-    },
 })
